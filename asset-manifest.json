@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.8355664f.css",
-    "main.js": "/static/js/main.f0397fc5.js",
+    "main.css": "/static/css/main.7c9bbaeb.css",
+    "main.js": "/static/js/main.0db9de91.js",
     "static/media/AnyQuant_img.png": "/static/media/AnyQuant_img.4a489c4f904d30997786.png",
+    "static/media/Healthcare_img.png": "/static/media/Healthcare_img.a31c48e340c5b02c03ce.png",
+    "static/media/Ecommerce_img.png": "/static/media/Ecommerce_img.074912a99bb57090de26.png",
     "static/media/netflix.png": "/static/media/netflix.ceea74206fe6925beffc.png",
     "static/media/creative-webpage.png": "/static/media/creative-webpage.2d12ed342d544b1ab006.png",
     "static/media/slack.png": "/static/media/slack.f0389b830a82f29e9124.png",
@@ -18,11 +20,11 @@
     "index.html": "/index.html",
     "static/media/close-icon.svg": "/static/media/close-icon.36a1df96f812b5f4c12f817f90a904c6.svg",
     "static/media/menu-icon.svg": "/static/media/menu-icon.9cbfc3090b4b0aec575128df8ede3633.svg",
-    "main.8355664f.css.map": "/static/css/main.8355664f.css.map",
-    "main.f0397fc5.js.map": "/static/js/main.f0397fc5.js.map"
+    "main.7c9bbaeb.css.map": "/static/css/main.7c9bbaeb.css.map",
+    "main.0db9de91.js.map": "/static/js/main.0db9de91.js.map"
   },
   "entrypoints": [
-    "static/css/main.8355664f.css",
-    "static/js/main.f0397fc5.js"
+    "static/css/main.7c9bbaeb.css",
+    "static/js/main.0db9de91.js"
   ]
 }
