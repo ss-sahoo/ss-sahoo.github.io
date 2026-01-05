@@ -1,6 +1,8 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import anyquantImg from "../assets/AnyQuant_img.png";
+import healthcareImg from "../assets/Healthcare_img.png";
+import ecommerceImg from "../assets/Ecommerce_img.png";
 import project1 from "../assets/netflix.png";
 import project2 from "../assets/Gym-website.png";
 import project3 from "../assets/Dashboard.png";
@@ -23,7 +25,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, linkurl, linkout, projectimg, isPrivate }) => {
+const Project = ({ title, linkurl, linkout, projectimg, isPrivate, isRestricted }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center  text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -33,35 +35,50 @@ const Project = ({ title, linkurl, linkout, projectimg, isPrivate }) => {
       className="relative  shadow-lg cursor-pointer"
     >
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
-        <div className="flex m-2 gap-2 w-full px-8">
+        <p className="text-xl sm:text-2xl font-playfair px-2">{title}</p>
+        <div className="flex m-2 gap-2 w-full px-4 sm:px-8">
           {isPrivate ? (
             <button
-              className="bg-gray-500 text-white rounded-sm font-semibold w-[50%] py-4 cursor-not-allowed"
+              className="bg-gray-500 text-white rounded-sm font-semibold w-[50%] py-2 sm:py-4 text-xs sm:text-base cursor-not-allowed"
               disabled
             >
               Private Code
             </button>
           ) : (
             <button
-              className="bg-gradient-rainblue text-deep-blue rounded-sm  font-semibold  w-[50%] py-4
+              className="bg-gradient-rainblue text-deep-blue rounded-sm font-semibold w-[50%] py-2 sm:py-4 text-xs sm:text-base
               hover:bg-blue hover:text-white transition duration-500"
             >
               <a href={linkurl}>View code</a>
             </button>
           )}
-          <button className="bg-deep-blue text-yellow hover:text-red transition duration-500 w-[50%] py-4  flex items-center justify-center  font-playfair">
-            <a href={linkout} target="_blank" rel="noopener noreferrer">View Live</a>
-          </button>
+          {isRestricted ? (
+            <button
+              className="bg-gray-600 text-gray-300 w-[50%] py-2 sm:py-4 text-xs sm:text-base flex items-center justify-center font-playfair cursor-not-allowed"
+              disabled
+            >
+              Restricted
+            </button>
+          ) : (
+            <button className="bg-deep-blue text-yellow hover:text-red transition duration-500 w-[50%] py-2 sm:py-4 text-xs sm:text-base flex items-center justify-center font-playfair">
+              <a href={linkout} target="_blank" rel="noopener noreferrer">View Live</a>
+            </button>
+          )}
         </div>
       </div>
-      <img
-        height={"500px"}
-        width={"500px"}
-        src={projectimg}
-        alt={projectTitle}
-        style={{ height: "180px" }}
-      />
+      {projectimg ? (
+        <img
+          src={projectimg}
+          alt={projectTitle}
+          className="h-[250px] sm:h-[280px] w-full object-cover"
+        />
+      ) : (
+        <div
+          className="bg-gray-700 flex items-center justify-center text-gray-400 font-playfair h-[250px] sm:h-[280px] w-full"
+        >
+          <span className="text-sm sm:text-base px-4 text-center">{title}</span>
+        </div>
+      )}
     </motion.div>
   );
 };
@@ -104,7 +121,7 @@ const Projects = () => {
           {/* ROW 1 */}
           <div
             className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[500px] max-h-[500px] text-2xl font-playfair font-semibold"
+              max-w-[400px] h-[250px] sm:h-[280px] text-2xl font-playfair font-semibold"
           >
             BEAUTIFUL USER INTERFACES
           </div>
@@ -113,6 +130,23 @@ const Projects = () => {
             projectimg={anyquantImg}
             isPrivate={true}
             linkout="https://www.anyquant.co.uk/"
+          />
+          <Project
+            title="Sushrusa E-Clinic"
+            projectimg={healthcareImg}
+            isPrivate={true}
+            linkout="https://sushrusaeclinic.com/"
+          />
+          <Project
+            title="Abriella Paintings"
+            projectimg={ecommerceImg}
+            isPrivate={true}
+            linkout="https://abriellapaintings.diracai.com/"
+          />
+          <Project
+            title="GovTechDSpace Court System"
+            isPrivate={true}
+            isRestricted={true}
           />
           <Project
             title="Food-Ordering App"
@@ -152,18 +186,18 @@ const Projects = () => {
             linkurl="https://github.com/ss-sahoo/Board"
             linkout="https://deluxe-chimera-60f69c.netlify.app/"
           />
-          <Project
+          {/* <Project
             title="creative-webpage"
             projectimg={project4}
             linkurl="https://github.com/ss-sahoo/Creative-web"
             linkout="https://ss-sahoo.github.io/Creative-web/"
-          />
+          /> */}
 
-          {/* ROW 3 */}
+        
 
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
-              max-w-[500px] max-h-[500px] text-2xl font-playfair font-semibold"
+              max-w-[400px] h-[250px] sm:h-[280px] text-2xl font-playfair font-semibold"
           >
             SMOOTH USER EXPERIENCE
           </div>
