@@ -25,12 +25,9 @@ const MySkills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            A B.Tech student specializing in Electronics and Telecommunication
-            Engineering has knowledge of frontend web development. I also have a
-            solid understanding of data structure and algorithms. I am
-            self-motivated, passionate about learning and staying up-to-date
-            with the latest industry trends, and committed to delivering
-            high-quality results.
+            Results-driven Full Stack Developer with 1+ years of experience in designing scalable web applications. 
+            Proficient in React.js, Next.js, Django, PostgreSQL, and UI/UX design. 
+            Passionate about delivering optimized, user-friendly experiences.
           </p>
         </motion.div>
 
@@ -54,7 +51,7 @@ const MySkills = () => {
 
       {/* SKILLS */}
       <div className="md:flex md:justify-between mt-16 gap-32">
-        {/* EXPERIENCE */}
+        {/* FRONTEND */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
@@ -76,11 +73,11 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            HTML,CSS,JAVASCRIPT,REACT.JS,BOOTSTAP,TAILWIND CSS,REDUX,FIREBASE
+            React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, Material UI, Redux
           </p>
         </motion.div>
 
-        {/* INNOVATIVE */}
+        {/* BACKEND */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
@@ -96,14 +93,14 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">02</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Problem Soving
+                Backend
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">C++, C, Object oriented prigramming</p>
+          <p className="mt-5">Django, REST APIs, PostgreSQL, Firebase, Authentication, Deployment</p>
         </motion.div>
-        {/* IMAGINATIVE */}
+        {/* TOOLS */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
@@ -122,7 +119,7 @@ const MySkills = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">Vs code, Figma,Firebase,Canva</p>
+          <p className="mt-5">Git, GitHub, Postman, Linux, Selenium, VS Code, Figma</p>
         </motion.div>
       </div>
     </section>

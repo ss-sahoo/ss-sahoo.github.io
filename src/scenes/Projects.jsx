@@ -1,5 +1,6 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import anyquantImg from "../assets/AnyQuant_img.png";
 import project1 from "../assets/netflix.png";
 import project2 from "../assets/Gym-website.png";
 import project3 from "../assets/Dashboard.png";
@@ -22,7 +23,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, linkurl, linkout, projectimg }) => {
+const Project = ({ title, linkurl, linkout, projectimg, isPrivate }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center  text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -34,15 +35,23 @@ const Project = ({ title, linkurl, linkout, projectimg }) => {
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
         <div className="flex m-2 gap-2 w-full px-8">
-          <button
-            className="bg-gradient-rainblue text-deep-blue rounded-sm  font-semibold  w-[50%] py-4
-            
+          {isPrivate ? (
+            <button
+              className="bg-gray-500 text-white rounded-sm font-semibold w-[50%] py-4 cursor-not-allowed"
+              disabled
+            >
+              Private Code
+            </button>
+          ) : (
+            <button
+              className="bg-gradient-rainblue text-deep-blue rounded-sm  font-semibold  w-[50%] py-4
               hover:bg-blue hover:text-white transition duration-500"
-          >
-            <a href={linkurl}>View code</a>
-          </button>
+            >
+              <a href={linkurl}>View code</a>
+            </button>
+          )}
           <button className="bg-deep-blue text-yellow hover:text-red transition duration-500 w-[50%] py-4  flex items-center justify-center  font-playfair">
-            <a href={linkout}>View output</a>
+            <a href={linkout} target="_blank" rel="noopener noreferrer">View Live</a>
           </button>
         </div>
       </div>
@@ -99,6 +108,12 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
+          <Project
+            title="AnyQuant Trading App"
+            projectimg={anyquantImg}
+            isPrivate={true}
+            linkout="https://www.anyquant.co.uk/"
+          />
           <Project
             title="Food-Ordering App"
             projectimg={project7}

@@ -8,7 +8,7 @@ const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   const handleDownload = () => {
     const cvUrl =
-      "https://drive.google.com/file/d/1TbPTYuJVevnZLWL_TPIi5Z3EizSPZZQq/view?usp=sharing";
+      "https://drive.google.com/file/d/1RnpPRECOG9nrdAdqxMezKsf6LwxDYmod/view?usp=sharing";
     window.open(cvUrl, "_blank");
   };
   return (
@@ -62,9 +62,9 @@ const Landing = ({ setSelectedPage }) => {
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Hi! I'm a Frontend Developer.I love to create beautiful and
-            performant products with delightful user experience. Passionate
-            about solving DSA based problems.
+            Hi! I'm a Full Stack Developer with 1+ years of experience building scalable web applications. 
+            Proficient in React.js, Next.js, Django, and PostgreSQL. Passionate about creating 
+            beautiful, performant products with delightful user experiences.
           </p>
         </motion.div>
 
