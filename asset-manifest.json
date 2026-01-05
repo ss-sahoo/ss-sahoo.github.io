@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7c9bbaeb.css",
-    "main.js": "/static/js/main.0db9de91.js",
+    "main.js": "/static/js/main.ff161c71.js",
     "static/media/AnyQuant_img.png": "/static/media/AnyQuant_img.4a489c4f904d30997786.png",
     "static/media/Healthcare_img.png": "/static/media/Healthcare_img.a31c48e340c5b02c03ce.png",
     "static/media/Ecommerce_img.png": "/static/media/Ecommerce_img.074912a99bb57090de26.png",
@@ -21,10 +21,10 @@
     "static/media/close-icon.svg": "/static/media/close-icon.36a1df96f812b5f4c12f817f90a904c6.svg",
     "static/media/menu-icon.svg": "/static/media/menu-icon.9cbfc3090b4b0aec575128df8ede3633.svg",
     "main.7c9bbaeb.css.map": "/static/css/main.7c9bbaeb.css.map",
-    "main.0db9de91.js.map": "/static/js/main.0db9de91.js.map"
+    "main.ff161c71.js.map": "/static/js/main.ff161c71.js.map"
   },
   "entrypoints": [
     "static/css/main.7c9bbaeb.css",
-    "static/js/main.0db9de91.js"
+    "static/js/main.ff161c71.js"
   ]
 }
